@@ -43,4 +43,4 @@ The Airline Ticket Reservation System is designed to simplify the flight booking
 
 ## 👨‍💻 Developer
 
-Developed by **Codeshield**
+Developed by: **Codeshield**
