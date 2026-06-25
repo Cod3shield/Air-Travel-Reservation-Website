@@ -1,0 +1,463 @@
+/* ==================== NAVBAR STYLES ==================== */
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-top: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    z-index: 1000;
+}
+
+/* Left section */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Continuous spin animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.earth-icon {
+    font-size: 50px;
+    margin-left: 130px;
+  
+
+    display: inline-block;          
+    animation: spin 5s linear infinite; 
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin-right: 20px;
+    padding: 10px 15px;
+}
+
+.nav-links a:hover {
+    color: #0ff;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 6px;
+}
+
+/* Right section (Login / Signup) */
+.nav-right a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Signup button */
+.signup {
+    padding: 8px 15px;
+    border: 2px solid #0d3b5f;
+    color: #0d3b5f;
+}
+
+.signup:hover {
+    background: #0ff;
+    color: white;
+}
+
+/* Social media links */
+.social-media {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+.social-media a:hover {
+    color: #0ff;
+}
+
+.social-media i {
+    font-size: 18px;
+}
+
+
+/* ==================== HAMBURGER MENU ==================== */
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    border: 2px solid #04a3a3;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.hamburger-menu .bar {
+    height: 4px;
+    width: 100%;
+    background-color: #0ff;
+    transition: all 0.3s ease;
+}
+
+/* Transform into X when open */
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+/* ==================== FOOTER STYLES ==================== */
+
+.footer {
+    color: #023027;
+    padding: 40px 20px 10px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.footer-col h3 {
+    margin-bottom: 10px;
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.footer-col a {
+    display: block;
+    color: #023027;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 5px 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.footer-col a:hover {
+    color: #057a7a;
+}
+
+.social-icons a {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #023027;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+   
+    padding-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* ==================== LARGE TABLET / SMALL DESKTOP ==================== */
+@media (min-width: 1025px) and (max-width: 1127px) {
+
+    .navbar {
+        padding: 12px 18px;
+        margin-top: 12px;
+        width: 97%;
+    }
+
+    .nav-left {
+        gap: 30px;
+    }
+
+    .earth-icon {
+        font-size: 29px;
+        margin-right: 40px;
+    }
+
+    .nav-links a {
+        font-size: 17px;
+        padding: 9px 14px;
+        margin-right: 12px;
+    }
+
+    .nav-right a {
+        font-size: 16px;
+        margin-left: 18px;
+    }
+
+    .signup {
+        padding: 7px 13px;
+    }
+}
+
+/* ==================== TABLET VIEW ==================== */
+@media (max-width: 1024px) and (min-width: 769px) {
+
+    .navbar {
+        padding: 12px 15px;
+        width: 98%;
+    }
+
+    .nav-left {
+        gap: 25px;
+    }
+
+    .earth-icon {
+        font-size: 28px;
+        margin-right: 20px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 8px 12px;
+        margin-right: 10px;
+    }
+
+    .nav-right a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
+    .signup {
+        padding: 6px 12px;
+    }
+
+    /* Continuous spin animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.earth-icon {
+    font-size: 30px;
+    margin-right: 100px;
+    display: inline-block;          /* needed so that transform can be applied */
+    animation: spin 5s linear infinite; /* continuous rotation */
+}
+
+    /* Show hamburger menu */
+    .hamburger-menu {
+        display: flex;
+        margin-right: 10px;  
+    }
+
+    /* Hidden menu (dropdown style) */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        align-items: center;
+        padding: 15px 0;
+        margin-top: 4px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        text-align: center;
+    }
+
+    /* Tablet Footer Layout */
+    .footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .footer-column {
+        width: 45%;
+    }
+
+    .social-media {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+}
+
+/* ==================== MOBILE VIEW IMPROVED ==================== */
+@media (max-width: 768px) {
+
+    .navbar {
+        width: 100%;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        font-size: 14px; /* slightly larger for readability */
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 18px; /* small increase for spacing balance */
+    }
+
+    .earth-icon {
+        font-size: 35px;
+        margin-left: 10px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px 0; /* slightly reduced padding */
+        gap: 12px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 14px; /* balanced size for readability */
+        padding: 8px 12px; /* consistent padding with font size */
+        margin: 0;
+    }
+
+    /* Mobile Footer Layout */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    .social-media {
+        margin-top: 15px;
+        gap: 18px; /* balanced gap */
+        justify-content: center;
+    }
+
+    .cookie-consent {
+        font-size: 14px; /* matches nav font size */
+    }
+}
+
+/* ==================== SMALL MOBILE VIEW (≤480px) ==================== */
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 8px 10px;
+        width: 100%;
+    }
+
+    .nav-left {
+        gap: 10px;
+    }
+
+    .earth-icon {
+        font-size: 28px;
+        margin-left: 5px;
+    }
+
+    .hamburger-menu {
+        width: 22px;
+        height: 18px;
+        padding: 4px;
+    }
+
+    .hamburger-menu .bar {
+        height: 3px;
+    }
+
+    .nav-links {
+        top: 55px;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    .nav-right a {
+        font-size: 13px;
+    }
+
+    .footer {
+        padding: 25px 10px 10px;
+    }
+
+    .footer-col {
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
+
+
+
+

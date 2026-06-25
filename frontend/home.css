@@ -1,0 +1,276 @@
+/* ================== GENERAL STYLES ================== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================== HERO SECTION ================== */
+.homehero {
+    background: url('plane.png') no-repeat center center/cover;
+    height: 470px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('plane.png') no-repeat center center/cover;
+}
+
+
+#text {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 40px;
+    color: rgb(208, 255, 0);
+    padding: 15px 25px;
+    border-radius: 10px;
+    white-space: nowrap;
+    text-align: center;
+    width: 500px;
+    transition: opacity 2s ease-in-out;
+}
+
+/* Error message */
+#flightError {
+    display: none;
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Red border sa invalid fields */
+.error-input {
+    border: 2px solid #ff0000 !important;
+    outline: none;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+/* ================== HIGHLIGHT BOX ================== */
+.highlight-box {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.highlight-box h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+.highlight-box p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #4a4a4a;
+}
+
+/* ================== BOOKING SECTION ================== */
+.booking-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -80px;
+    font-style: italic;
+}
+
+.booking-box {
+    background: rgb(231, 215, 215);
+    width: 90%;
+    max-width: 1100px;
+    min-height: 120px;
+    height: auto;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* ===== SEARCH BUTTON (MOVED BELOW) ===== */
+.search-btn-wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    /* right side */
+}
+
+
+.trip-type {
+    margin-bottom: 20px;
+}
+
+.trip-type label {
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.form-row input,
+.form-row select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    flex: 1;
+    min-width: 150px;
+}
+
+.search-btn {
+    background: #0d3b5f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: #0ff;
+}
+
+/* ================== PROFILE CONTAINER ================== */
+.profile-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 10px;
+    border: 5px solid #0d3b5f;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    border-color: #0ff;
+}
+
+/* ================== TABLET RESPONSIVE (FOR DEVICES 769px–1024px) ================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .homehero {
+        height: 380px !important;
+    }
+
+    #text {
+        font-size: 28px;
+        width: 80%;
+        white-space: normal;
+    }
+
+    .booking-box {
+        height: auto;
+    }
+
+    .form-row {
+        flex-wrap: wrap;
+    }
+
+    .form-row input,
+    .form-row select {
+        flex: 1 1 45%;
+    }
+
+    .search-btn {
+        flex: 1 1 100%;
+    }
+
+}
+
+/* =================== RESPONSIVE =================== */
+
+/* MOBILE STYLES (for screens less than 768px) */
+@media (max-width: 768px) {
+
+    /* HERO SECTION */
+    .hero {
+        height: 350px !important;
+    }
+
+    /* BOOKING CONTAINER */
+    .booking-container {
+        margin-top: 15px;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .booking-box {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-row input,
+    .form-row select {
+        width: 300px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .search-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* PROFILE CONTAINER */
+    .profile-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    #text {
+        font-size: 25px;
+    }
+
+    #flightError {
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .profile-img {
+        width: 80px;
+        height: 80px;
+        margin: 10px 0;
+    }
+
+}

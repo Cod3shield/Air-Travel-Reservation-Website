@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="nav-left">
+        <span class="earth-icon">✈️</span>
+
+        <nav class="nav-links">
+        <a href="#" class="nav-item">Explore</a>
+        <a href="#" class="nav-item">Manage</a>
+        <a href="#" class="nav-item">Attention</a>
+      </nav>
+    </div>
+
+    <div class="nav-right">
+        <a href="#" id="Help">Help</a>
+        <a href="#">Log in</a>
+        <a href="#" class="signup">Sign up</a>
+    </div>
+
+    <div id="hamburger" class="hamburger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+</header>
+
+
+<div class="homehero">
+    <h1 id="text">Explore the World</h1>
+</div>
+
+
+<div class="booking-container">
+
+<div class="booking-box">
+
+
+<div class="trip-type">
+
+<label>
+<input type="radio" name="trip" id="returnTrip" checked>
+Return
+</label>
+
+
+<label>
+<input type="radio" name="trip" id="oneWay">
+One way
+</label>
+
+
+<label>
+<input type="radio" name="trip" id="multiCity">
+Multi-city
+</label>
+
+</div>
+
+
+<div class="form-row">
+
+
+<select id="from">
+
+<option value="">
+Select Origin Country
+</option>
+
+</select>
+
+
+
+<select id="to">
+
+<option value="">
+Select Destination Country
+</option>
+
+</select>
+
+<input type="date" id="departDate">
+
+<input type="date" id="returnDate">
+
+<select>
+
+<option>
+1 Passenger Economy
+</option>
+
+<option>
+Business Class
+</option>
+
+<option>
+First Class
+</option>
+
+</select>
+
+
+
+</div>
+
+
+<!-- MULTI CITY -->
+
+<div class="form-row" id="multiCitySection" style="display:none;">
+
+
+<select id="from2">
+
+<option value="">
+Select Origin Country
+</option>
+
+</select>
+
+
+<select id="to2">
+
+<option value="">
+Select Destination Country
+</option>
+
+</select>
+
+
+<input type="date" id="date2">
+
+
+</div>
+
+<div id="flightError" style="display:none; color:red;"></div>
+
+<div class="search-btn-wrapper">
+
+<button type="button" class="search-btn" id="searchBtn">
+
+Search Flights
+
+</button>
+
+</div>
+</div>
+</div>
+
+<div class="highlight-box">
+
+<h1>
+Travel far, experience more.
+</h1>
+
+<p>
+Explore new places and create memories.
+</p>
+
+</div>
+
+<div class="profile-container">
+<img src="nesoya.jpg" class="profile-img">
+<img src="london.jpg" class="profile-img">
+<img src="ny.jpg" class="profile-img">
+<img src="egypt.jpg" class="profile-img">
+<img src="niagara.jpg" class="profile-img">
+</div>
+
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-col">
+
+<h3>AIRTRAVEL</h3>
+
+<p>
+Airtravel helps you<br> find and book<br>
+cheap and convenient<br> flights worldwide.<br>
+Travel smarter<br> easier, and faster.
+</p>
+
+</div>
+
+<div class="footer-col">
+
+<h3>QUICK LINKS</h3>
+
+<a href="#" id="exploreFlights">
+Explore Flights
+</a>
+
+<a href="#" id="manageBooking">
+Manage Booking
+</a>
+
+<a href="#" id="helpCenter">
+Help Center
+</a>
+
+</div>
+
+<div class="footer-col">
+
+<h3>SUPPORT</h3>
+
+<a href="#" id="contactUs">
+Contact Us
+</a>
+
+<a href="#" id="cancellation">
+Cancellation Policy
+</a>
+
+<a href="#" id="privacyPolicy">
+Privacy Policy
+</a>
+
+</div>
+
+<div id="modal">
+
+<div class="modal-content">
+
+<span id="closeBtn">
+&times;
+</span>
+
+<h2 id="modalTitle"></h2>
+
+<p id="modalText"></p>
+
+</div>
+</div>
+
+<div class="footer-col">
+
+<h3>FOLLOW US</h3>
+
+<div class="social-icons">
+
+<a href="https://www.facebook.com/" target="_blank">
+<i class="fab fa-facebook"></i>
+</a>
+
+<a href="https://www.instagram.com/" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+
+<a href="https://www.twitter.com/" target="_blank">
+<i class="fab fa-twitter"></i>
+</a>
+
+<a href="https://www.youtube.com/" target="_blank">
+<i class="fab fa-youtube"></i>
+</a>
+
+</div>
+</div>
+</div>
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Airtravel. All rights reserved.
+</p>
+
+</div>
+
+</footer>
+<script src="script.js"></script>
+<script src="description.js"></script>
+<script src="registration.js"></script>
+</body>
+</html>
